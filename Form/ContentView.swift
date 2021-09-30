@@ -20,7 +20,7 @@ struct ContentView: View {
                                 .clipShape(Circle())
                             
                             VStack(alignment: .leading){
-                                Text("Lutfi").font(.headline)
+                                Text("Profile").font(.headline)
                                 Text("IOS Developer").font(.caption)
                             }
                         }
@@ -41,7 +41,7 @@ struct ContentView: View {
                                 .foregroundColor(.white)
                             Text("Pesan Berbintang")
                         }
-
+                        
                     }
                     NavigationLink(destination: About()){
                         HStack(spacing:20){
@@ -64,7 +64,7 @@ struct ContentView: View {
                             .foregroundColor(.white)
                         Text("Akun")
                     }}
-                   
+                    
                     NavigationLink(destination: About()){ HStack(spacing:20){
                         Image(systemName: "phone.circle")
                             .frame(width: 35, height: 35)
@@ -73,7 +73,11 @@ struct ContentView: View {
                             .foregroundColor(.white)
                         Text("Chat")
                     }}
-                 Section(header: Text("Pengaturan Lanjutan")){
+                    
+                }
+                ///
+                Section(header: Text("Pengaturan Lanjutan")){
+                    
                     NavigationLink(destination: About()){
                         HStack(spacing:20){
                             Image(systemName:"key.fill")
@@ -118,8 +122,31 @@ struct ContentView: View {
                             
                         }
                     }}
-                   
-                }
+                
+                Section(header: Text("About")){
+                    NavigationLink(destination: About()){
+                        
+                        HStack{
+                            Image(systemName: "info")
+                                .frame(width: 35, height: 35)
+                                .background(Color .blue)
+                                .cornerRadius(10)
+                                .foregroundColor(.white)
+                            Text("Starred Messages")
+                            
+                        }}
+                    NavigationLink(destination: About()){
+                        HStack{
+                            
+                            Image(systemName: "heart")
+                                .frame(width: 35, height: 35)
+                                .background(Color .red)
+                                .cornerRadius(10)
+                                .foregroundColor(.white)
+                            Text("Tell A Freind")
+                        }
+                        
+                    }}
             }
             .navigationBarTitle("Settings")
         }
@@ -131,9 +158,8 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-    struct About : View{
-        var body: some View{
-            Text("Ini Adalah Halaman About")
-        }
+struct About : View{
+    var body: some View{
+        Text("Ini Adalah Halaman About")
     }
-
+}
