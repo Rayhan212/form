@@ -73,6 +73,51 @@ struct ContentView: View {
                             .foregroundColor(.white)
                         Text("Chat")
                     }}
+                 Section(header: Text("Pengaturan Lanjutan")){
+                    NavigationLink(destination: About()){
+                        HStack(spacing:20){
+                            Image(systemName:"key.fill")
+                                .frame(width: 35, height: 35)
+                                .background(Color .blue)
+                                .cornerRadius(10)
+                                .foregroundColor(.white)
+                            Text("Account")
+                            
+                        }}
+                    
+                    NavigationLink(destination: About()){
+                        HStack(spacing:20){
+                            Image(systemName: "phone.circle")
+                                .frame(width: 35, height: 35)
+                                .background(Color .green)
+                                .cornerRadius(10)
+                                .foregroundColor(.white)
+                            Text("Chat")
+                            
+                        }}
+                    
+                    NavigationLink(destination: About()){
+                        HStack(spacing:20){
+                            Image(systemName: "iphone.radiowaves.left.and.right")
+                                .frame(width: 35, height: 35)
+                                .background(Color .red)
+                                .cornerRadius(10)
+                                .foregroundColor(.white)
+                            Text("Notification")
+                            
+                        }}
+                    
+                    NavigationLink(destination: About()){
+                        HStack(spacing:20){
+                            Image(systemName: "arrow.up.arrow.down")
+                                .frame(width: 35, height: 35)
+                                .background(Color .green)
+                                .cornerRadius(10)
+                                .foregroundColor(.white)
+                            Text("Data and Storage Usage")
+                            
+                        }
+                    }}
                    
                 }
             }
