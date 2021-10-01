@@ -73,6 +73,30 @@ struct ContentView: View {
                             .foregroundColor(.white)
                         Text("Chat")
                     }}
+                 Section(header: Text("About")){
+                    NavigationLink(destination: About()){
+                        
+                        HStack{
+                            Image(systemName: "info")
+                                .frame(width: 35, height: 35)
+                                .background(Color .blue)
+                                .cornerRadius(10)
+                                .foregroundColor(.white)
+                            Text("Starred Messages")
+                            
+                        }}
+                    NavigationLink(destination: About()){
+                        HStack{
+                            
+                            Image(systemName: "heart")
+                                .frame(width: 35, height: 35)
+                                .background(Color .red)
+                                .cornerRadius(10)
+                                .foregroundColor(.white)
+                            Text("Tell A Freind")
+                        }
+                        
+                    }}
                    
                 }
             }
